@@ -8,6 +8,7 @@ import SignupModal from "@/app/components/modals/SignupModal";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import LoginModal from "@/app/components/modals/LoginModal";
 import ProfileModal from "@/app/components/modals/ProfileModal";
+import NewPostModal from "@/app/components/modals/NewPostModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,8 @@ export default async function RootLayout({
           <LoginModal />
           {/* プロフィール用モーダル */}
           <ProfileModal currentUser={currentUser} />
+          {/* 新規投稿用モーダル */}
+          <NewPostModal />
 
           <div>
             <div className="flex min-h-screen flex-col">

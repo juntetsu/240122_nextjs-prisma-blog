@@ -45,3 +45,5 @@ const Textarea: React.FC<TextareaProps> = ({
     </div>
   );
 };
+
+export default Textarea;

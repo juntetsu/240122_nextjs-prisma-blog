@@ -1,12 +1,21 @@
-import getCurrentUser from "@/app/actions/getCurrentUser";
+import PostItem from "@/app/components/post/PostItem";
+import getPosts from "@/app/actions/getPosts";
 
 // メインページ
 const Home = async () => {
-  const currentUser = await getCurrentUser();
-  
+  // 投稿一覧取得
+  const posts = await getPosts();
+
+  // 投稿がない場合
+  if (posts.length === 0) {
+    return <div className="text-center">投稿はありません</div>;
+  }
+
   return (
-    <div className="text-center">
-      {currentUser ? <div>認証中</div> : <div>未認証</div>}
+    <div>
+      {posts.map((post, index) => {
+        return <PostItem key={index} post={post} />;
+      })}
     </div>
   );
 };

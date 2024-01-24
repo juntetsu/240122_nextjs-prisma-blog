@@ -110,9 +110,9 @@ const NewPostModal = () => {
         toast.success("新規投稿しました！");
         setStep(STEPS.CONTENT);
         reset();
-        router.refresh();
         newPostModal.onClose();
         router.push("/");
+        router.refresh();
       }
     } catch (error) {
       toast.error("エラーが発生しました。" + error);

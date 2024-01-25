@@ -10,6 +10,7 @@ import LoginModal from "@/app/components/modals/LoginModal";
 import ProfileModal from "@/app/components/modals/ProfileModal";
 import NewPostModal from "@/app/components/modals/NewPostModal";
 import EditPostModal from "@/app/components/modals/EditPostModal";
+import DeletePostModal from "@/app/components/modals/DeletePostModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,8 @@ export default async function RootLayout({
           <NewPostModal />
           {/* 投稿編集用モーダル */}
           <EditPostModal />
+          {/* 投稿削除用モーダル */}
+          <DeletePostModal />
 
           <div>
             <div className="flex min-h-screen flex-col">

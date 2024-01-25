@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { format, set } from "date-fns";
+import { format } from "date-fns";
 import { User, Post } from "@prisma/client";
 
-import useEditPostModal from "@/app/hooks/useDeletePostModal";
+import useEditPostModal from "@/app/hooks/useEditPostModal";
 import useDeletePostModal from "@/app/hooks/useDeletePostModal";
 import Button from "@/app/components/button/Button";
 import Image from "next/image";

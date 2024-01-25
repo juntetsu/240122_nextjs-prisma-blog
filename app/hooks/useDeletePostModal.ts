@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { PostModalType } from "@/app/types";
 
 // 投稿編集モーダルの状態を管理する
-const useEditPostModal = create<PostModalType>((set) => ({
+const useDeletePostModal = create<PostModalType>((set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
@@ -17,4 +17,4 @@ const useEditPostModal = create<PostModalType>((set) => ({
   setPost: (payload) => set({ post: payload }),
 }));
 
-export default useEditPostModal;
+export default useDeletePostModal;
